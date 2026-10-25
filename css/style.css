@@ -1,0 +1,283 @@
+/* تنظیمات کلی */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f5fb;
+    color: #252b48;
+    min-height: 100vh;
+}
+
+/* صفحه لاگین */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px #252b4833;
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #6246c7;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-box p {
+    color: #888da8;
+    margin-bottom: 30px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #e1e4f0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #7657d5;
+    box-shadow: 0 0 0 3px #7657d522;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #764ba244;
+}
+
+/* داشبورد */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* منوی کناری */
+.sidebar {
+    width: 250px;
+    background: #252b48;
+    color: white;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    color: #b6a4ff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    display: block;
+    color: #d8daeb;
+    text-decoration: none;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #7657d5;
+    color: white;
+}
+
+/* محتوای داشبورد */
+.main-content {
+    flex: 1;
+    padding: 35px;
+    min-width: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 27px;
+    color: #252b48;
+}
+
+.header p {
+    color: #888da8;
+    margin-top: 8px;
+}
+
+/* کارت‌های آماری */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #252b480a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #252b4815;
+}
+
+.card .icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #888da8;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 30px;
+    color: #6246c7;
+}
+
+/* بخش اطلاعات */
+.content-box {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px #252b480a;
+}
+
+.content-box h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.content-box p {
+    color: #777d96;
+    line-height: 2;
+}
+
+/* جدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px 10px;
+    text-align: right;
+    border-bottom: 1px solid #eeeef5;
+}
+
+th {
+    color: #6246c7;
+    background: #f8f7ff;
+}
+
+td {
+    color: #555b75;
+}
+
+/* دکمه عمومی */
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    background: #7657d5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6246c7;
+}
+
+/* نمایش بهتر در موبایل */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+.sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .content-box {
+        overflow-x: auto;
+    }
+}
